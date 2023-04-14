@@ -7,89 +7,71 @@
   <link rel="stylesheet" href="./style.css">
   <title>Test Interface by Caroles</title>
   <link rel="shortcut icon" href="favicon.ico">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <script src="https://kit.fontawesome.com/7f673c9e75.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <script src="code.js"></script>
 </head>
 
 <body>
-
   <div id="menu">
-    <div class="menu-itens">
-        <div class="infos-base">
-          <img src="https://mosistemas.com/imagem/mo/logo-v1.png" class="logo-menu">
-          <span class="nome-base">Base M&O</span>
-          <span class="material-symbols-outlined">unfold_more</span>
-        </div>
+    <div class="menu-principal" onclick="toggleSidebar()">
+      <div class="infos-base">
+        <img src="https://mosistemas.com/imagem/mo/logo-v1.png" class="logo-menu">
+        <span class="menu-span nome-base">Base M&O</span>
+      </div>
+      <div class="modulo-base">
+        <span class="menu-span nome-modulo">TMS Embarcador</span>
+        <i class="bi bi-chevron-expand menu-span"></i>
+        <i class="bi bi-folder hidden"></i>
+      </div>
+      <ul>
+        <li class="icon icon-menu">
+          <i class="bi bi-search"></i>
+          <input type="text" class="menu-span pesquisar" placeholder="Pesquisar...">
+        </li>
+        <li class="icon icon-menu">
+          <i class="bi bi-house"></i>
+          <span class="menu-span icon-texto">Home</span>
+        </li>
+        <li class="icon icon-menu">
+          <i class="bi bi-list"></i>
+          <span class="menu-span icon-texto">Menu</span>
+        </li>
+        <li class="icon icon-menu">
+          <i class="bi bi-bell"></i>
+          <span class="menu-span icon-texto">Notificações</span>
+        </li>
+        <li class="icon icon-menu">
+          <i class="bi bi-star"></i>
+          <span class="menu-span icon-texto">Favoritos</span>
+        </li>
 
-        <div class="modulo-base">
-          <span class="nome-modulo">TMS Embarcador</span>
-          <span class="material-symbols-outlined">unfold_more</span>
-        </div>
+        <div class="icon separador"></div>
 
-        <ul class="itens-btn">
-          <li class="icon icon-menu">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <span class="icon-texto">Buscar</span>
-          </li>
-          <li class="icon icon-menu">
-            <i class="fa-solid fa-house"></i>
-            <span class="icon-texto">Home</span>
-          </li>
-          <li class="icon icon-menu">
-            <i class="fa-solid fa-bars"></i>
-            <span class="icon-texto">Menu</span>
-          </li>
-          <li class="icon icon-menu">
-            <i class="fa-regular fa-bell"></i>
-            <span class="icon-texto">Notificações</span>
-          </li>
-
-          <li class="icon icon-menu">
-            <i class="fa-regular fa-star"></i>
-            <span class="icon-texto">Favoritos</span>
-          </li>
-
-          <div class="menu-separador"></div>
-
-          <li class="icon icon-menu">
-            <img src="https://mosistemas.com/imagem/mo/config.svg" class="configuracao">
-            <span class="icon-texto">Configurações</span>
-          </li>
-          <li class="icon icon-menu">
-            <i class="fa-regular fa-user"></i>
-            <span class="icon-texto">Perfil</span>
-          </li>
-          <li class="icon icon-menu">
-            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-            <span class="icon-texto">Sair</span>
-          </li>
-        </ul>
-
-      <!--<a href="#" class="btn-menu"><i class="icon-btn fa-solid fa-chevron-left"></i></a>!-->
-
-
+        <li class="icon icon-menu">
+          <i class="bi bi-gear"></i>
+          <span class="menu-span icon-texto">Configurações</span>
+        </li>
+        <li class="icon icon-menu">
+          <i class="bi bi-person"></i>
+          <span class="menu-span icon-texto">Perfil</span>
+        </li>
+        <li class="icon icon-menu">
+          <i class="bi bi-box-arrow-left"></i>
+          <span class="menu-span icon-texto">Sair</span>
+        </li>
+      </ul>
       <div class="infos-sistema">
-        <p class="infos-texto">EDI6-2</p>
-        <p class="infos-texto">Versão 2.19</p>
+        <a href="#">
+          <p class="infos-texto">EDI6 - 2</p>
+        </a>
+        <p class="infos-texto">V 2.19</p>
       </div>
     </div>
   </div>
 
-  <div class="aba-sidebar">
-    <h1>Menu</h1>
-  </div>
-
-  <script>
-    let btn = document.querySelector("#btn-test");
-    let menu = document.querySelector(".menu");
-    let searchBtn = document.querySelector(".fa-magnifying-glass");
-
-    btn.onclick = function() {
-      sidebar.classList.toggle("active")
-    }
-  </script>
+  <button class="btn-menu" onclick="toggleSidebar()"><i class="bi bi-chevron-right"></i></button>
 
 </body>
+
 
 </html>

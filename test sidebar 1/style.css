@@ -7,30 +7,32 @@
 
 body {
   font-family: "Inter";
+  color: #737373;
+  overflow: hidden;
 }
 
 #menu {
-  background-color: #fff;
-  width: 270px;
+  width: 70px;
   height: 100%;
+  background-color: #fff;
   border-radius: 0px 20px 20px 0px;
-  box-shadow: 5px 0px 8px rgba(0, 0, 0, 0.2);
-  position: absolute;
+  box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
   left: 0;
   top: 0;
+  transition: 300ms;
+  z-index: 1;
 }
 
-.menu-itens {
+.menu-principal {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 15px;
 }
 
 .infos-base {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  text-decoration: none;
 }
 
 .logo-menu {
@@ -42,50 +44,12 @@ body {
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  color: #737373;
-}
-
-.btn-menu {
-  text-decoration: none;
-  transition: color 0s;
-  position: fixed;
-  left: 295px;
-  top: 50px;
-  width: 25px;
-  height: 25px;
-  border-radius: 100%;
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: #737373;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-}
-
-.icon-btn {
-  font-size: 10px;
-}
-
-.btn-menu:hover {
-  left: 285px;
-  width: 35px;
-  border-radius: 12.5px;
-  transition: linear 100ms;
-  background-color: #337ab7;
-  color: #ffffff;
-}
-
-.btn-menu:focus {
-  transform: rotate(180deg);
-  box-shadow: -1px -1px 5px rgba(0, 0, 0, 0.3);
 }
 
 .modulo-base {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
-  text-decoration: none;
+  margin: 15px 0;
   background-color: #f6f6f6;
   border-radius: 10px;
   padding: 10px;
@@ -94,51 +58,45 @@ body {
 .nome-modulo {
   font-size: 14px;
   font-weight: 600;
-  color: #737373;
 }
 
-.material-symbols-outlined {
-  color: #737373;
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 20
+.pesquisar {
+  border: 0;
+  padding-left: 15px;
 }
 
 
 .icon {
-  display: flex;
-  align-items: center;
-  padding: 15px 0;
+  padding: 15px 0 15px 10px;
   text-decoration: none;
+  list-style-type: none;
 }
 
 .icon-menu {
-  color: #737373;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
+  font-size: 18px;
 }
+
 
 .icon-texto {
   font-size: 12px;
   font-weight: 500;
-  color: #737373;
   padding-left: 15px;
 }
 
-.menu-separador {
-  width: 200px;
+.hidden {
+  display: none;
+}
+
+.separador {
+  width: 30px;
   border-top: 1px solid #dddddd;
-  margin: 30px 0;
+  margin: 10px 0;
 }
 
 .infos-sistema {
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
-  padding-top: 15px;
+  padding: 15px 0;
 }
 
 .infos-texto {
@@ -146,9 +104,30 @@ body {
   color: #737373;
 }
 
-.aba-sidebar {
+.btn-menu {
+  transition: color 0s;
+  position: fixed;
+  top: 45px;
+  width: 25px;
+  height: 25px;
+  z-index: 1;
+  border-radius: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   border: 1px solid #dddddd;
-  border-radius: 0 15px 15px 0;
-  width: 300px;
-  height: 100vh;
 }
+
+.btn-menu:hover {
+  left: 75px;
+  width: 30px;
+  border-radius: 12.5px;
+  transition: linear 110ms;
+  background-color: #337ab7;
+  color: #ffffff;
+  border: 1px solid #dddddd;
+}
+
+
